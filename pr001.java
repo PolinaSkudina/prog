@@ -10,7 +10,9 @@ class pr001 {
 		System.out.println("Результат целоцисленного деления: "+ Var2345678/2);
 		System.out.println(Var2345678/2);
 		double Var3 = (double)Var2345678/2;
-
+		if(Var1=0)
+			System.out.println("Условие Var1=0 выполнено");
+		System.out.println("Строка для проверки");
 
 	}
 }
