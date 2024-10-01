@@ -1,6 +1,7 @@
 class Help { 
-        public static void main(String args[]) throws java.io.IOException {
-        char choice, ignore;
+  public static void main(String args[]) throws java.io.IOException {
+  char choice, ignore;
+  for(;;) {
 	do {
         	System.out.println("Справка по операторам: ");
         	System.out.println(" 1. if");
@@ -8,6 +9,8 @@ class Help {
 		System.out.println(" 3. for");
 		System.out.println(" 4. while");
 		System.out.println(" 5. do-while");
+		System.out.println(" 6. break");
+		System.out.println(" 5. continue\n");
 		System.out.println("Выберете номер раздела: ");
 		choice =(char) System.in.read();
 		do {
@@ -47,6 +50,16 @@ class Help {
 			 System.out.println(" оператор:");
                          System.out.println("while (условие):");
 			 break;
+		 case '6':
+                         System.out.println("Оператор break:\n");
+                         System.out.println(" break; или break метка:");
+                         break;
+		 case '7':
+                         System.out.println("Оператор break:\n");
+                         System.out.println(" continue; или continue метка:");
+
+                         break;
+
 				
 
 		default:
