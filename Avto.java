@@ -4,10 +4,10 @@ class Avtomobil {
 	double rash; //расход топлива в л. на 100 км
 
 	void rasst() {
-		System.out.println("Расстояние на полном баке: " + (int)(v/rash *100));
+		System.out.println("Расстояние на полном баке: " + ((int)(v/rash *100)));
 }
-class pr004 {
-  		public static void main(String args[]) {
+class Avto {
+  	public static void main(String args[]) {
 		//Создание экземпляра класса
 		Avtomobil Lada = new Avtomobil();
 		Avtomobil porsh = new Avtomobil();
@@ -31,6 +31,5 @@ class pr004 {
 		Lada.rasst();
 		System.out.println("Для Porse");
 		porsh.rasst();
-
 	}
 }

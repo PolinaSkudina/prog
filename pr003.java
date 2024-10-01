@@ -166,7 +166,7 @@ class pr003 {
 		
 		int e;
 		int result;
-		for (int i9 = 0; i < 10; i9++) {
+		for (int i9 = 0; i9 < 10; i9++) {
 			result = 1;
 			e = i9;
 			while(e > 0) {
@@ -238,13 +238,13 @@ three: 					{
 		{
 done:
 			for(int i9=0; i9<10; i9++) {
-				 for (int i9=0; i9<10; i9++) {
+				 for (int j9=0; j9<10; j9++) {
 					  for (int k9=0; i9<10; i9++) {
 						  if(i9==5) break done; //Переход по метке
 								}
 					  			System.out.println("После цикла k"); //Не выполняется
 						}
-						System.out.println("После цикла i9"); //Не выполняется
+						System.out.println("После цикла j9"); //Не выполняется
 					}
 					System.out.println("После цикла i9"); //Не выполняется
 			}
@@ -252,17 +252,17 @@ done:
 			System.out.println("\n");
 			//Метка перед оператором for
 stop1:			for(int i9=0; i9<5; i9++) {
-                                 for (int i9=0; i9<5; i9++) {
+                                 for (int j9=0; j9<5; j9++) {
                                                   if(i9==2) break stop1;
-						  System.out.println("i9 и i9: " + i9 + " " + i9);
+						  System.out.println("i9 и i9: " + i9 + " " + j9);
 					}
 				}
 				System.out.println("\n");
 				for(int i9=0; i9<5; i9++) {
 stop2:				{
-					for(int i9=0; i9<5; i9++) {
+					for(int j9=0; j9<5; j9++) {
 						if(i9==2) break stop2;
-						System.out.println("i9 и i9: " + i9 + " " + i9);
+						System.out.println("i9 и j9: " + i9 + " " + j9);
 
 				}
 			
@@ -280,7 +280,7 @@ stop2:				{
 			outerloop:
 		        for(int i9=1; i9<10; i9++) {
 				System.out.print("\nПроход внешнего цикла №" + i9 + ", внутренний цикл:");
-				for(int i9=1; i9<10; i9++) {
+				for(int j9=1; j9<10; j9++) {
 					if(i9==5) continue outerloop; //продолжить внешний цик
 					System.out.print(i9);
 			}
