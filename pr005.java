@@ -110,8 +110,41 @@ class Arrays {
                                 System.out.print(riders[i3][j3] + " ");
                         System.out.println();
                 }
+		//Ссылки на массивы
+		System.out.println();
+		for(int i3=0; i3<10; i3++)
+			sample[i3] = i3;
+		for(int i3=0; i3<10; i3++)
+                        sample[i3] = -i3;
+		System.out.println("Массив  sample[]: ");
+		for(int i3=0; i3<10; i3++)
+			System.out.print(sample[i3]+ " ");
+		System.out.println();
+		System.out.println("Массив  sample[]: ");
+                for(int i3=0; i3<10; i3++)
+                        System.out.print(sample[i3]+ " ");
+		System.out.println();
+		sample1 = sample;
+		sample1[4] = 1111;
+		System.out.println("Массив  sample[] после изменения элемента с индексом 4 в sample1[4]: ");
+		for(int i3=0; i3<10; i3++)
+                        System.out.print(sample[i3]+ " ");
+		System.out.println();
+		System.out.print("sample[]: " + sample + " sample[]:  " + sample1);
 
+		//Копирование массива
+		System.out.println();
+		int[] sample3 = new int[10];
+		for(int i3=0; i3<10; i3++)
+			sample3[i3] = -i3;
+		if(sample.length >= sample3.length)
+			for( int i3=0; i3<sample3.length; i3++)
+			sample1[i3] = sample3[i3];
 
+		//Вывод содержимого sample1 после копирования
+		System.out.println("Массив  sample[] после копирования: ");			for(int i3=0; i3<sample1.length; i3++)
+			 System.out.println(sample1[i3] +  " ");  
+		 System.out.println();
 		
 	}
 }
