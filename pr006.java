@@ -59,10 +59,56 @@ class pr006 {
 		System.out.print("Дешифрованное сообщение: ");
 		System.out.println(decmsg);
 
+		//Операция побитового "HE"
+		System.out.println();
+		byte b = -34;
+		for(int t1=128; t1>0; t1=t1/2) {
+			if((b & t1) != 0 )
+				System.out.print("1 ");
+			else
+				System.out.print("0 ");
+		}
 
+		System.out.println();
+		
+		System.out.println();
+                b = (byte) ~b;
+		System.out.println(b);
 
+                for(int t1=128; t1>0; t1=t1/2) {
+                        if((b & t1) != 0 )
+                                System.out.print("1 ");
+                        else
+                                System.out.print("0 ");
 
-
+		}
+                System.out.println();
+		
+		//Сдвиговые битовые опреации
+		System.out.println();
+		int v = 1;
+		for(int i = 0; i < 8; i++) {
+			for(int t1=128; t1>0; t1=t1/2) {
+                        	if((v & t1) != 0 )
+                                	System.out.print("1 ");
+                        	else
+                                	System.out.print("0 ");
+			}
+			System.out.println();
+			v = v << 1;
+		}
+		System.out.println();
+		v = 128;
+                for(int i = 0; i < 8; i++) {
+                        for(int t1=128; t1>0; t1=t1/2) {
+                                if((v & t1) != 0 )
+                                        System.out.print("1 ");
+                                else
+                                        System.out.print("0 ");
+                        }
+                        System.out.println();
+                        v = v >> 1;
+		}
 
 
 	}
