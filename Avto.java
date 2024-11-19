@@ -1,7 +1,7 @@
 class Avtomobil {
 	int pass; //количество пассажиров
 	int v; // обьем топливного бака в л.
-	double rash; //расход топлива в л. на 100 км
+	private double rash; //расход топлива в л. на 100 км
 
 	Avtomobil(int p, int V, double r) {
 		pass = p;
@@ -22,7 +22,37 @@ class Avtomobil {
 		return ((double)km/100)*rash;
 	}
 
+	//Методы доступв к переменным экзэмплярп
+	int getPass() {
+		return pass;
 	}
+	void setPass(int p) {
+		pass = p;
+	}
+	int getV() {
+		return V;
+	}
+	void setV(int V) {
+		v =V;
+	}
+	double getRash() {
+		return rash;
+	void setRash(double r) {
+		rash r;
+	}
+	}
+class Truck extends Avtomobil{
+       private  int cargocap; //грузоподьемность
+
+	//Конструктор
+	Truck(int p, int V, double r, int c) {
+		super(p, v, r);
+		cargocap = c;
+	}
+
+	int getCargo() {
+		return cargocap:
+		
 class Avto {
   	public static void main(String args[]) {
 		//Создание экземпляра класса

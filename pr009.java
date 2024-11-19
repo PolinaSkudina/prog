@@ -2,6 +2,15 @@
 class TwoDShape {
 	private double width;
 	private double height;
+
+	//Конструктор без параметров
+	TwoDShape() {
+	
+
+	//Конструктор суп
+	TwoDShape(double w, double h) {
+		width = w;
+		hieght = h;
 	void showDim() {
 		System.out.println("Ширина и высота: " + width + " и " + height);
 		}
@@ -27,12 +36,15 @@ class Triangle extends TwoDShape {
 	String style;
 	//Конструктор 
 	Triangle(String s, double  w, double h) {
-		//Установка значений переменной подкласса
-		style = s;
-		//Установка значений для перемменых суперкласса
-		setWidth(w);
-		setHeight(h);
-	}
+	//Вызов конструктора супер класса
+		suoer (w, h);
+		//Установка значений для перемменой подкласса
+		stile  = s;
+	
+	//Конструктор с одним параметром
+	Triangle (double x) (
+		super(x);
+		stile  = "закрашеенный"
 	double area() {
 		return getWidth()*getHeight()/2;
 	}
@@ -45,11 +57,10 @@ class Rectangle extends TwoDShape {
 	String outline;
 	//Конструктор 
         Rectangle(String o, double  w, double h) {
+		//Вызов конструктора супер класса 
+		super(w, h);
                 //Установка значений переменной подкласса
                 outline  = o;
-                //Установка значений для перемменых суперкласса
-                setWidth(w);
-                setHeight(h);
 	}
 
 	double area()  {
@@ -70,7 +81,7 @@ class pr009 {
 		Triangle t2 = new Triangle("контурный", 8.0, 12.0);
 		Rectangle r1 = new Rectangle("сплошная", 4.0, 4.0);
 		Rectangle r2 = new Rectangle("пунктирная", 8.0, 12.0);
-		
+		 System.out.println();
 		
 	/*	t1.setWidth = 4.0;
 		t1.setHeight = 4.0;
